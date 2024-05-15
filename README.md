@@ -43,7 +43,7 @@ This plugin follows the Semantic Versioning (SemVer) standard. The current versi
 
 ## Contributing
 
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/jaspreetnet/yandex-smartcaptcha-wordpress-plugin/issues) or submit a pull request.
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/jassifx/yandex-smartcaptcha/issues) or submit a pull request.
 
 ## License
 
@@ -51,6 +51,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-This plugin was developed by [Jaspreet Singh](https://jaspreet.net) out of necessity and is not affiliated with Yandex.
+This plugin was developed by [Jaspreet Singh](https://www.jaspreet.net) out of necessity and is not affiliated with Yandex.
 
 
