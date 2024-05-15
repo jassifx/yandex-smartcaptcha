@@ -15,7 +15,7 @@ Yandex SmartCaptcha WordPress Plugin is a WordPress plugin that integrates Yande
 
 ## Installation
 
-1. Download the latest release from the [Releases](https://github.com/jaspreetnet/yandex-smartcaptcha/releases) page.
+1. Download the latest release from the [Releases](https://github.com/jassifx/yandex-smartcaptcha/tree/main) page.
 2. Upload the plugin folder to the `/wp-content/plugins/` directory on your WordPress site.
 3. Activate the plugin through the 'Plugins' menu in WordPress.
 4. Configure the plugin settings under 'Yandex SmartCaptcha' in the WordPress admin dashboard.
