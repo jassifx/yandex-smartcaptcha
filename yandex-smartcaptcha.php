@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Yandex SmartCaptcha
-Plugin URI: https://yoursite.com
+Plugin URI: https://www.jaspreet.net
 Description: Integrate Yandex SmartCaptcha into your WordPress site as a replacement for reCAPTCHA and hCaptcha.
-Version: 0.07-ALPHA
+Version: 0.10-ALPHA
 Author: Jaspreet Singh
 Author URI: https://www.jaspreet.net
-License: MIT
+License: GPL2
 */
 
 // Register plugin settings
@@ -25,9 +25,45 @@ add_action('admin_init', function() {
 // Add menu item and page for plugin settings
 add_action('admin_menu', function() {
     add_options_page('Yandex SmartCaptcha Settings', 'Yandex SmartCaptcha', 'manage_options', 'yandex_smartcaptcha', function() {
+        // Check Yandex Cloud connectivity and key acceptance
+        $status_class = 'error';
+        $status_message = 'Not Connected';
+
+        $key = get_option('yandex_smartcaptcha_key');
+        $secret = get_option('yandex_smartcaptcha_secret');
+
+        if (!empty($key) && !empty($secret)) {
+            $url = 'https://captcha.yandex.net';
+            $response = wp_remote_get($url);
+
+            if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
+                $status_class = 'success';
+                $status_message = 'Connected';
+            } else {
+                $status_message = 'Unable to connect';
+            }
+        }
+
         ?>
+        <style>
+            .status-indicator {
+                display: inline-block;
+                padding: 4px 8px;
+                border-radius: 4px;
+                color: #fff;
+            }
+
+            .success {
+                background-color: #28a745;
+            }
+
+            .error {
+                background-color: #dc3545;
+            }
+        </style>
         <div class="wrap">
             <h2>Yandex SmartCaptcha Settings</h2>
+            <div id="yandex_smartcaptcha_status" class="status-indicator <?php echo $status_class; ?>"><?php echo $status_message; ?></div>
             <form method="post" action="options.php">
                 <?php settings_fields('yandex_smartcaptcha_options_group'); ?>
                 <table class="form-table">
@@ -57,10 +93,10 @@ add_action('admin_menu', function() {
 
 // Enqueue Yandex SmartCaptcha script
 add_action('wp_enqueue_scripts', function() {
-    $replace_recaptcha = get_option('yandex_smartcaptcha_replace_recaptcha');
-    $replace_hcaptcha = get_option('yandex_smartcaptcha_replace_hcaptcha');
+    $replaceRecaptcha = get_option('yandex_smartcaptcha_replace_recaptcha');
+    $replaceHcaptcha = get_option('yandex_smartcaptcha_replace_hcaptcha');
 
-    if ($replace_recaptcha || $replace_hcaptcha) {
+    if ($replaceRecaptcha || $replaceHcaptcha) {
         wp_enqueue_script('yandex-smartcaptcha', 'https://captcha.yandex.net/key/', array(), '1.0', true);
     }
 });
@@ -121,14 +157,14 @@ add_action('admin_notices', function() {
     ob_start();
     add_action('shutdown', function() {
         $html = ob_get_clean();
-        $has_recaptcha = strpos($html, 'https://www.google.com/recaptcha/api.js');
-        $has_hcaptcha = strpos($html, 'https://hcaptcha.com/1/api.js');
+        $hasRecaptcha = strpos($html, 'https://www.google.com/recaptcha/api.js');
+        $hasHcaptcha = strpos($html, 'https://hcaptcha.com/1/api.js');
 
-        if ($has_recaptcha !== false) {
+        if ($hasRecaptcha !== false) {
             echo '<div class="notice notice-info"><p>reCAPTCHA is already being used on this site.</p></div>';
         }
 
-        if ($has_hcaptcha !== false) {
+        if ($hasHcaptcha !== false) {
             echo '<div class="notice notice-info"><p>hCaptcha is already being used on this site.</p></div>';
         }
     });
