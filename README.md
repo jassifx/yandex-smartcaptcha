@@ -1,9 +1,9 @@
 # Yandex SmartCaptcha WordPress Plugin
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/jaspreetnet/yandex-smartcaptcha-wordpress-plugin)
-![GitHub last commit](https://img.shields.io/github/last-commit/jaspreetnet/yandex-smartcaptcha-wordpress-plugin)
-![GitHub issues](https://img.shields.io/github/issues/jaspreetnet/yandex-smartcaptcha-wordpress-plugin)
-![GitHub](https://img.shields.io/github/license/jaspreetnet/yandex-smartcaptcha-wordpress-plugin)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jaspreetnet/yandex-smartcaptcha)
+![GitHub last commit](https://img.shields.io/github/last-commit/jaspreetnet/yandex-smartcaptcha)
+![GitHub issues](https://img.shields.io/github/issues/jaspreetnet/yandex-smartcaptcha)
+![GitHub](https://img.shields.io/github/license/jaspreetnet/yandex-smartcaptcha)
 
 Yandex SmartCaptcha WordPress Plugin is a WordPress plugin that integrates Yandex SmartCaptcha into your WordPress site as a replacement for reCAPTCHA and hCaptcha.
 
@@ -15,7 +15,7 @@ Yandex SmartCaptcha WordPress Plugin is a WordPress plugin that integrates Yande
 
 ## Installation
 
-1. Download the latest release from the [Releases](https://github.com/jaspreetnet/yandex-smartcaptcha-wordpress-plugin/releases) page.
+1. Download the latest release from the [Releases](https://github.com/jaspreetnet/yandex-smartcaptcha/releases) page.
 2. Upload the plugin folder to the `/wp-content/plugins/` directory on your WordPress site.
 3. Activate the plugin through the 'Plugins' menu in WordPress.
 4. Configure the plugin settings under 'Yandex SmartCaptcha' in the WordPress admin dashboard.
