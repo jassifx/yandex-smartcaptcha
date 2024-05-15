@@ -1,0 +1,34 @@
+/* yandex-smartcaptcha.css */
+
+/* Styling for the Yandex SmartCaptcha container */
+.yandex-smartcaptcha {
+    margin-bottom: 20px;
+}
+
+/* Example styles for the captcha form */
+.yandex-smartcaptcha form {
+    display: flex;
+    flex-direction: column;
+}
+
+.yandex-smartcaptcha input[type="text"],
+.yandex-smartcaptcha input[type="email"],
+.yandex-smartcaptcha textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.yandex-smartcaptcha input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yandex-smartcaptcha input[type="submit"]:hover {
+    background-color: #005d80;
+}
