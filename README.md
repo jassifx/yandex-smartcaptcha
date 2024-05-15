@@ -33,7 +33,7 @@ Yandex SmartCaptcha WordPress Plugin is a WordPress plugin that integrates Yande
 
 To integrate Yandex SmartCaptcha with Contact Form 7, use the following shortcode in your Contact Form 7 forms:
 
-```markdown
+
 [yandex_smartcaptcha_contact_form_7 id="YOUR_FORM_ID"]
 
 
