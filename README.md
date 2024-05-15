@@ -1,9 +1,9 @@
 # Yandex SmartCaptcha WordPress Plugin
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/jaspreetnet/yandex-smartcaptcha)
-![GitHub last commit](https://img.shields.io/github/last-commit/jaspreetnet/yandex-smartcaptcha)
-![GitHub issues](https://img.shields.io/github/issues/jaspreetnet/yandex-smartcaptcha)
-![GitHub](https://img.shields.io/github/license/jaspreetnet/yandex-smartcaptcha)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jassifx/yandex-smartcaptcha)
+![GitHub last commit](https://img.shields.io/github/last-commit/jassifx/yandex-smartcaptcha)
+![GitHub issues](https://img.shields.io/github/issues/jassifx/yandex-smartcaptcha)
+![GitHub](https://img.shields.io/github/license/jassifx/yandex-smartcaptcha)
 
 Yandex SmartCaptcha WordPress Plugin is a WordPress plugin that integrates Yandex SmartCaptcha into your WordPress site as a replacement for reCAPTCHA and hCaptcha.
 
