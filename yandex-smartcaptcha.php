@@ -6,7 +6,7 @@ Description: Integrate Yandex SmartCaptcha into your WordPress site as a replace
 Version: 0.10-ALPHA
 Author: Jaspreet Singh
 Author URI: https://www.jaspreet.net
-License: GPL2
+License: MIT
 */
 
 // Register plugin settings
